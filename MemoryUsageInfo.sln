@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifyMemoryUsageInfoService", "NotifyMemoryUsageInfoService\NotifyMemoryUsageInfoService.csproj", "{2251431E-8E56-4AEF-82CC-75AF9F0F3AAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2251431E-8E56-4AEF-82CC-75AF9F0F3AAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2251431E-8E56-4AEF-82CC-75AF9F0F3AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2251431E-8E56-4AEF-82CC-75AF9F0F3AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2251431E-8E56-4AEF-82CC-75AF9F0F3AAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A16C1E6-51E8-452D-AFDD-54D8F483B4EE}
+	EndGlobalSection
+EndGlobal
