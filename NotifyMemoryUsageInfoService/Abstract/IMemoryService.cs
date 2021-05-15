@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NotifyMemoryUsageInfoService
 {
-    public interface IMemoryManager
+    public interface IMemoryService
     {
         void CheckMemoryStatus();
     }

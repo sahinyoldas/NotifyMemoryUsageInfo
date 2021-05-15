@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NotifyMemoryUsageInfoService
 {
-    public class SMTPMailSender : IMailSender
+    public class SMTPMailSender : IMailService
     {
         private ILogger _logger { get; }
 

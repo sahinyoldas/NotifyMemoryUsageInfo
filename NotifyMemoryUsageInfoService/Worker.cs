@@ -13,12 +13,12 @@ namespace NotifyMemoryUsageInfoService
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-        private IMemoryManager _memoryManager;
+        private IMemoryService _memoryService;
 
-        public Worker(ILogger<Worker> logger, IMemoryManager memoryManager)
+        public Worker(ILogger<Worker> logger, IMemoryService memoryService)
         {
             _logger = logger;
-            _memoryManager = memoryManager;
+            _memoryService = memoryService;
         }
 
         public override async Task StartAsync(CancellationToken cancellationToken)
@@ -31,7 +31,7 @@ namespace NotifyMemoryUsageInfoService
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                _memoryManager.CheckMemoryStatus();
+                _memoryService.CheckMemoryStatus();
                 await Task.Delay(ConstantFields.ServiceWorkingTime, stoppingToken);
             }
         }

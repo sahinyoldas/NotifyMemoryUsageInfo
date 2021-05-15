@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NotifyMemoryUsageInfoService
 {
-    public interface IMailSender
+    public interface IMailService
     {
         bool SendMail(string mailBodyText);
     }

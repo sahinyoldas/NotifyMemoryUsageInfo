@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace NotifyMemoryUsageInfoService
 {
-    public class MemoryManager : IMemoryManager
+    public class MemoryManager : IMemoryService
     {
         private ILogger _logger;
-        private IMailSender _mailSender;
+        private IMailService _mailService;
 
-        public MemoryManager(ILogger logger, IMailSender mailSender)
+        public MemoryManager(ILogger logger, IMailService mailService)
         {
             _logger = logger;
-            _mailSender = mailSender;
+            _mailService = mailService;
         }
 
         private static double _systemTotalMemorySize { get; set; }
@@ -85,7 +85,7 @@ namespace NotifyMemoryUsageInfoService
                 }
                 else if (ConstantFields.MaxMemorySizeForNotify > 0 && remainingMemorySize > ConstantFields.MaxMemorySizeForNotify)
                 {
-                    _mailSender.SendMail(ConstantFields.SystemText.ExcessiveMemoryUsage + "<br/>" + string.Format(memoryUsageSummary, "<br/>"));
+                    _mailService.SendMail(ConstantFields.SystemText.ExcessiveMemoryUsage + "<br/>" + string.Format(memoryUsageSummary, "<br/>"));
                 }
                 else
                 {

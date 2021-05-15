@@ -24,8 +24,8 @@ namespace NotifyMemoryUsageInfoService
                     var logger = serviceProvider.GetService<ILogger<Program>>();
                     services.AddSingleton(typeof(ILogger), logger);
 
-                    services.AddSingleton<IMailSender, SMTPMailSender>();
-                    services.AddSingleton<IMemoryManager, MemoryManager>();
+                    services.AddSingleton<IMailService, SMTPMailSender>();
+                    services.AddSingleton<IMemoryService, MemoryManager>();
                     services.AddHostedService<Worker>();
                 });
     }
